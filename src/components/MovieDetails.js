@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
+import "../styles/movieDetails.css"
 
 const API_KEY = "ec827be8";
 
 const MovieDetails = () => {
   const { imdbID } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
       if (movieDetails === null) {
@@ -24,25 +27,30 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-
+  
+  const goBack = () => {
+    navigate("/")
+  }
   return (
+    <>
+    <button className='go-back' onClick={goBack}>Go Back</button>
     <div className='details'>
     <div className='details-top'>
       <div className='details-img'>
         <img src={movieDetails.Poster} alt={movieDetails.Title} />
         <div className='details-year'>{movieDetails.Year}</div>
-        <div className='details-title'>{movieDetails.Title}</div>
-        <div className='details-runtime'>{movieDetails.Runtime}</div>
+        <div className='details-title'>{movieDetails.Title} - {movieDetails.Runtime}</div>
         <div className='details-type'>{movieDetails.Type}</div>
       </div>
+      </div>
       <div className='details-bottom'>
-        <div className='details-plot'>{movieDetails.Plot}</div>
-        <div className='details-cast'>{movieDetails.Actors}</div>
-        <div className='details-genre'>{movieDetails.Genre}</div>
-        <div className='details-rating'>{movieDetails.imdbRating}</div>
+        <div className='details-plot'><span className='details-span'>Plot: </span> <span className='details-plot-text'>{movieDetails.Plot}</span></div>
+        <div className='details-plot'><span className='details-span'>Actors: </span>{movieDetails.Actors}</div>
+        <div className='details-plot'><span className='details-span'>Genre: </span>{movieDetails.Genre}</div>
+        <div className='details-plot'><span className='details-span'>IMBD Rating: </span>{movieDetails.imdbRating}</div>
       </div>
     </div>
-    </div>
+    </>
   );
 };
 

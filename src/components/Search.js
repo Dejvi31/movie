@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/search.css";
 import MovieCard from './MovieCard';
 
@@ -10,15 +10,21 @@ const Search = () => {
   const [movie,setMovie] = useState([])
 
   const fetchData = () => {
-    fetch(`${API_URL}${search}&apikey=${API_KEY}`)
+    const searchTerm = search.trim() || "joker";
+    fetch(`${API_URL}${searchTerm}&apikey=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
-        setMovie(data.Search)
+        setMovie(data.Search);
       })
       .catch((err) => {
         console.log(err);
       });
   };
+   
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line
+  }, []);
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
