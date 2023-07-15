@@ -1,7 +1,6 @@
 .movie-card {
-    color: white;
-    width: fit-content;
-    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
 }
 .movie-img{
     position: relative;

@@ -8,12 +8,12 @@ const API_KEY = "ec827be8";
 const Search = () => {
   const [search, setSearch] = useState("");
   const [movie,setMovie] = useState([])
+
   const fetchData = () => {
     fetch(`${API_URL}${search}&apikey=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
         setMovie(data.Search)
-        console.log(data.Search);
       })
       .catch((err) => {
         console.log(err);
@@ -27,7 +27,7 @@ const Search = () => {
   const handleSearchClick = () => {
     fetchData();
   };
-
+ 
   return (
     <>
     <div className='search-box'>
@@ -43,7 +43,7 @@ const Search = () => {
       <div className='movies-list'>
       {movie.map((movies,index) => {
         return (
-          <MovieCard key={index} Title={movies.Title} Poster={movies.Poster} Year={movies.Year} />
+          <MovieCard key={index} movie={movies}/>
         )
       }) 
       }
