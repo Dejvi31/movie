@@ -1,0 +1,21 @@
+.movie-card {
+    color: white;
+    width: fit-content;
+    padding: 0.5rem;
+}
+.movie-img{
+    position: relative;
+    width: fit-content;
+}
+.movie-year{
+    position: absolute;
+    background-color: grey;
+    padding: 0.3rem;
+    top: 0.1rem;
+    right: 0.1rem;
+}
+.movie-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
