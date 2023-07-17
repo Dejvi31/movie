@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
 import "../styles/movieDetails.css"
+import Loading from './Loading';
 
 const API_KEY = "ec827be8";
 
@@ -25,7 +26,7 @@ const MovieDetails = () => {
 
 
   if (!movieDetails) {
-    return <div>Loading...</div>;
+    return <div style={{display:"flex",alignItems:"center",justifyContent:"center",height: "100vh"}}><Loading/></div>
   }
   
   const goBack = () => {
