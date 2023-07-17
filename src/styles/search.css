@@ -1,4 +1,5 @@
 .search-box {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +19,7 @@
     color: rgb(185, 185, 185);
 }
 .search-btn {
-  padding: 0.8rem;
+  padding: 0.6rem;
   background-color: #fff;
   border: none;
   border-radius: 0.7rem;
@@ -33,3 +34,25 @@
     row-gap: 1rem;
     place-items: center;
 }
+.fav {
+    position: absolute;
+    top: 0.1rem;
+    right: 2rem;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.num-favorites {
+    color: #fff;
+    font-size: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 1.7rem;
+    line-height: 0.8rem; 
+    background-color: red;
+    top: 2rem; 
+    left: 0.75rem; 
+    transform: translate(-50%, -50%); 
+  }
+  

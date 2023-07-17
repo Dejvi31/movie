@@ -5,16 +5,13 @@
    justify-content: center;
    flex-direction: column;
 }
-.details-top {
-    width: fit-content;
-}
 .details-img {
-    width: fit-content;
     position: relative;
+    width: 300px;
 }
 .details-year {
     position: absolute;
-    top: 0.1rem;
+    top: 0.2rem;
     right: 0.1rem;
     padding: 0.3rem;
     color: #fff;
