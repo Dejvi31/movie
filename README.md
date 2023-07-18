@@ -36,16 +36,4 @@ The application uses React Router for navigation between different pages. The us
 
 The number of favorite movies is displayed next to the heart icon in the header. This number is updated dynamically when the user adds or removes movies from the favorites list.
 
-The application uses Bootstrap for basic styling. The CSS files are included in the src/styles folder.
 
-The Loading component is provided to display a loading spinner while fetching movie details.
-
-The user's favorite movies are stored in the browser's localStorage, so they will persist even after the user closes the browser.
-
-The application has been tested in modern web browsers. However, for the best experience, it is recommended to use the latest versions of browsers like Chrome, Firefox, or Edge.
-
-This application is intended for demonstration purposes and may not be suitable for production use without further enhancements, such as error handling, data validation, and security measures.
-
-Feel free to explore the codebase to understand how different components are connected and how state and props are managed throughout the application.
-
-That's it! With these instructions, you should be able to run the Movie Search Application locally on your machine. Happy movie searching! 🎬
