@@ -13,7 +13,7 @@ const MovieDetails = () => {
 
   useEffect(() => {
       if (movieDetails === null) {
-        fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`)
+        fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`)
           .then((res) => res.json())
           .then((data) => {
             setMovieDetails(data);

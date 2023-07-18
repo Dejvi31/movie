@@ -4,7 +4,7 @@ import "../styles/search.css";
 import MovieCard from './MovieCard';
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
-const API_URL = "http://www.omdbapi.com/?s=";
+const API_URL = "https://www.omdbapi.com/?s=";
 const API_KEY = "ec827be8";
 
 const Search = () => {
