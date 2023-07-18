@@ -34,6 +34,30 @@
     row-gap: 1rem;
     place-items: center;
 }
+@media screen and (max-width: 1024px) {
+    .movies-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .search-input {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .movies-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 465px) {
+    .movies-list {
+        grid-template-columns: 1fr;
+    }
+    .search-input {
+        width: 45%;
+    }
+      .search-box {
+        justify-content: flex-start;
+    }
+}
 .fav {
     position: absolute;
     top: 0.1rem;
